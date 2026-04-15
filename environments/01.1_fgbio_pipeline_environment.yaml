@@ -1,0 +1,11 @@
+name: snakemake_7
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - snakemake=7
+  - bwa
+  - samtools>=1.14
+  - fgbio>=2.0.0
+  - openjdk>=8
