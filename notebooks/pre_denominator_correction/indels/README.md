@@ -46,11 +46,11 @@ A five-panel diagnostic figure assessing the technical quality of called indels:
 
 | Panel | Description | What to look for |
 |---|---|---|
-| Insertion vs. Deletion Ratio | Global count of INS vs. DEL | Roughly balanced, or biologically justified skew |
-| Size Distribution | Indel length (1–4 bp and 5+ bp), split by type | Exponential decay (shorter indels should dominate) |
+| Insertion vs. Deletion Ratio | Global count of INS vs. DEL | A ratio of del:ins between 2:1 and 3:1 is expected |
+| Size Distribution | Indel length (1–4 bp and 5+ bp), split by type | Mostly 1bp indels, and expecting an over-representation of 3bp indels (as these do not cause frameshits) |
 | Homopolymer Context | Flanking homopolymer length per indel type | Excess long homopolymers may indicate polymerase slippage artefacts |
-| Normalised Read Position | Distribution of indels along the read (0–1) | Spikes near 0 or 1 suggest soft-clipping or alignment artefacts |
-| Strand Bias | SSCS strand balance score | Distribution centred at ~0.5; extremes indicate technical bias |
+| Normalised Read Position | Distribution of indels along the read (0–1) | Spikes near 0 or 1 suggest that read-end error is slipping through|
+| Strand Bias | SSCS strand balance score | Distribution centred at ~0.5 is expected. Singletons with a bias =0 or =1 are expected as well|
 
 ---
 
