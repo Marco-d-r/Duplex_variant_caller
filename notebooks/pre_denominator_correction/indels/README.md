@@ -36,7 +36,7 @@ Estimation of the indel mutation rate after filtering, expressed as **indels per
 
 A separate bar chart compares the **observed cord blood indel rate** against the **expected biological reference rate** (2×10⁻⁹ indels per base), as a direct sanity check on pipeline calibration.
 
-> **Note:** One cord blood sample (`Cordblood_H1`) is excluded from burden plots; verify whether this is a known outlier before finalising.
+> **Note:** One cord blood sample (`Cordblood_H1`) is excluded from burden plots; this is due to an issue in library prep affecting depth and suspected to have introduced additional errors
 
 ---
 
