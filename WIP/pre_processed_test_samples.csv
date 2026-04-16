@@ -1,0 +1,2 @@
+sample_id,vcf_path,sample_type,age,bases,mean_dcs_depth,bam_path
+CUH832_PBMC_CD4, ,tils, 52, , 400, /Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/CUH832_PBMC_CD4.duplex.cons.mapped.bam

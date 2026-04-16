@@ -1,0 +1,5 @@
+vep --cache --offline --dir_cache /Users/marcodupuisrodriguez/.vep \
+--species homo_sapiens --assembly GRCh38 \
+--input_file CH_variants_for_VEP.vcf \
+--output_file ch_variants_annotated.tsv \
+--tab --everything --force_overwrite

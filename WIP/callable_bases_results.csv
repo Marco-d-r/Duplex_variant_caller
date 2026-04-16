@@ -1,0 +1,2 @@
+sample_id,vcf_path,sample_type,age,bases,mean_dcs_depth,bam_path,raw_total_bases,total_wes_bp,total_sequenced_bases_wes,callable_sequenced_bases_wes,pct_callable_bases_wes,mean_depth_wes,total_padded_bp,total_sequenced_bases_padded,callable_sequenced_bases_padded,pct_callable_bases_padded,mean_depth_padded
+CUH832_PBMC_CD4, ,tils, 52, , 400, /Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/CUH832_PBMC_CD4.duplex.cons.mapped.bam,19164784633,33817126,9743532731,9742462001,99.989,288.1242,84373304,15568259693,15544687278,99.8486,184.5164
