@@ -35,6 +35,8 @@ The notebook operates on the **filtered VCFs** produced in `02.4_snv_test_and_pl
 
 Estimation of the mutation rate after filtering across three sample types: **cord blood**, **T-cells**, and **PBMCs** — each with their own expected mutation rate.
 
+Comparing the observed cord blood mutation rate (2.53e-8 SNVs/bp) to the 'reference' (2e-8 SNVs/bp) suggests that we may be succesfully keeping error rate quite low.
+
 Plots compare mutation burden as a function of cell type and age, showing an age gradient and biologically plausible mutation rates.
 
 > **Note:** Filtering may be conservative — rates are slightly but consistently lower than expected. This is acceptable: the pipeline prioritises **specificity over sensitivity**, in keeping with the single-molecule calling objective.
