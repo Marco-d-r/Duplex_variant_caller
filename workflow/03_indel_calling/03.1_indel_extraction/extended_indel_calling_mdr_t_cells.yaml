@@ -1,0 +1,73 @@
+# ==============================================================================
+# I. REFERENCE FILES (PATHS)
+# Update these paths to point to your actual reference files.
+# ==============================================================================
+REF_FILES:
+  # Reference Genome FASTA used for alignment and normalization.
+  ref_fasta: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Marco_sequencing_data_and_variant_processing/reference_genome/GRCh38.primary_assembly.genome.fa"
+  
+  # File containing all necessary '##contig' header lines for VCFs.
+  contigs_hdr: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Marco_sequencing_data_and_variant_processing/reference_genome/contigs.hdr"
+  
+  # Target Region BED File used for splitting and metric calculation.
+  bed_targets: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Marco_sequencing_data_and_variant_processing/reference_genome/hg38_exome_v2.0.2_targets_sorted_validated.re_annotated.bed"
+  
+  # Blacklist BED files to exclude problematic regions.
+  blacklist_bed: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Marco_sequencing_data_and_variant_processing/reference_genome/master_blacklist.bed"
+  
+  
+
+# ==============================================================================
+# II. GLOBAL PARAMETERS
+# Controls parallelization, resources, and final annotation fields.
+# ==============================================================================
+PARAMS:
+  # DCS Parallelization: Number of chunks to split the BED file into (Rule: split_bed_regions).
+  n_chunks_dcs: 60
+  
+  # SSCS Parallelization: Number of chunks to split the final DCS candidate VCF into (Rule: split_candidate_vcf).
+  n_chunks_sscs: 60
+  
+  # Comma-separated list of the new SSCS fields to annotate onto the DCS VCF (Rule: final_annotate).
+  final_annot_fields: 'INFO/N_ALT_SSCS,INFO/N_TOTAL_SSCS,INFO/STRAND_BIAS_SSCS,INFO/RP_MED_SSCS,INFO/RP_SD_SSCS,INFO/N_SLIPPAGE_SSCS'
+
+
+
+
+# ==============================================================================
+# III. SAMPLE DATA
+# List of all samples and their associated BAM file paths.
+# ==============================================================================
+samples:
+  # Sample names and paths
+  27YO_UDI5:
+    dcs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/expt_1_27YO_bams/UDI5.duplex.cons.mapped.bam"  
+    sscs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/expt_1_27YO_bams/UDI5.sscs.cons.mapped.bam" 
+  27YO_UDI6:
+    dcs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/expt_1_27YO_bams/UDI6.duplex.cons.mapped.bam"  
+    sscs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/expt_1_27YO_bams/UDI6.sscs.cons.mapped.bam" 
+  UDI21_3x:
+    dcs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/expt_1_3x_output/UDI21.V.1.1.7.duplex.cons.mapped.bam"  
+    sscs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/expt_1_3x_output/UDI21.V.1.1.7.sscs.cons.mapped.bam" 
+  UDI22_3x:
+    dcs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/expt_1_3x_output/UDI22.V.1.1.7.duplex.cons.mapped.bam"  
+    sscs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/expt_1_3x_output/UDI22.V.1.1.7.sscs.cons.mapped.bam" 
+  UDI23_3x:
+    dcs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/expt_1_3x_output/UDI23.V.1.1.7.duplex.cons.mapped.bam"  
+    sscs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/expt_1_3x_output/UDI23.V.1.1.7.sscs.cons.mapped.bam" 
+  UDI24_3x:
+    dcs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/expt_1_3x_output/UDI24.V.1.1.7.duplex.cons.mapped.bam"  
+    sscs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/expt_1_3x_output/UDI24.V.1.1.7.sscs.cons.mapped.bam" 
+  CUH832_PBMC_CD4:
+    dcs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/CUH832_processed_bams/CUH832_PBMC_CD4.duplex.cons.mapped.bam"  
+    sscs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/CUH832_processed_bams/CUH832_PBMC_CD4.sscs.cons.mapped.bam" 
+  CUH832_PBMC_CD8:
+    dcs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/CUH832_processed_bams/CUH832_PBMC_CD8.duplex.cons.mapped.bam"  
+    sscs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/CUH832_processed_bams/CUH832_PBMC_CD8.sscs.cons.mapped.bam"  
+  CUH832_TILS_CD4:
+    dcs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/CUH832_processed_bams/CUH832_TILS_CD4.duplex.cons.mapped.bam" 
+    sscs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/CUH832_processed_bams/CUH832_TILS_CD4.sscs.cons.mapped.bam" 
+  CUH832_TILS_CD8:
+    dcs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/CUH832_processed_bams/CUH832_TILS_CD8.duplex.cons.mapped.bam" 
+    sscs_bam: "/Users/marcodupuisrodriguez/Documents/PhD/CUH832_processed_bams/CUH832_TILS_CD8.sscs.cons.mapped.bam" 
+  

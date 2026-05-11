@@ -1,0 +1,1 @@
+Venetia aggregated the scripts in section 02.1, 02.2, 03.1 and 03.2 and adapted them to be run on the HPC, producing a single pipeline that is able to extract and annotate SNVs and indels at the same time

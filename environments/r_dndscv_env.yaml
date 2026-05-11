@@ -1,0 +1,19 @@
+name: r_dndscv_env
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - ipykernel
+  - jupyter
+  - jupyter_client
+  - matplotlib
+  - pandas
+  - pysam
+  - python=3.10
+  - r-base
+  - r-devtools
+  - r-irkernel
+  - rpy2
+  - seaborn
+
+prefix: "/Users/marcodupuisrodriguez/.local/share/mamba/envs/r_dndscv_env"

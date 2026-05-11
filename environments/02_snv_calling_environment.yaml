@@ -1,0 +1,35 @@
+name: 02_snv_calling_environment.yaml
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - bwa
+  - samtools[version='>=1.14']
+  - fgbio=2.0.2
+  - snakemake
+  - python=3.11
+  - picard
+  - openjdk=17
+  - gatk4
+  - bcftools[version='>=1.10']
+  - pyarrow
+  - scikit-learn
+  - datamash
+  - pybedtools
+  - shap
+  - ipykernel
+  - jupyter
+  - seaborn
+  - mosdepth
+  - msisensor-pro
+  - lofreq
+  - polars
+  - lightgbm
+  - pyranges
+  - perl-dbi
+  - perl-dbd-mysql
+  - perl-list-moreutils
+  - perl-archive-zip
+  - perl-json
+  - perl-lwp-simple
+prefix: /Users/marcodupuisrodriguez/miniforge3/envs/fgbio_env

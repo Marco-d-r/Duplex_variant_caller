@@ -1,0 +1,38 @@
+{
+  "thresholds": {
+    "germline_vaf_max": 0.2,
+    "gnomad_vaf_cutoff": 0.24621182882191875,
+    "depth_percentile_max": 99,
+    "variants_20bp_max": 4,
+    "variants_250bp_max": 12,
+    "ref_entropy_min": 0.8603707163272007,
+    "avg_alt_softclip_max": 1.832530530966096,
+    "dist_to_softclip_min": 1,
+    "avg_alt_n_count_max": 2.3321261439058416,
+    "avg_alt_nm_max": 4.184453101955012,
+    "mean_insert_max": 763.4386785247398,
+    "asxs_min": 36,
+    "mean_mapq_min": 20,
+    "dist_to_indel_min": 0,
+    "mean_baseq_min": 49,
+    "gc_content_min": 0.10900041874034923,
+    "gc_content_max": 0.9345904801367704,
+    "strand_bias_n_alt_min": 15,
+    "strand_bias_min": 0.2894157281745688,
+    "strand_bias_max": 0.9477670956578487,
+    "rp_sd_min": 0.009841892483605076,
+    "rp_sd_min_alt": 8,
+    "homopolymer_len_max": 12,
+    "avg_altread_variants_max": 9.596327722185949,
+    "avg_altread_variants_max_for_high_vaf": 9.761937432317842,
+    "avg_altread_high_vaf_cutoff": 0.19838062952320687,
+    "n_total_min": 4,
+    "rp_med_min": 0.032345185137076155,
+    "rp_med_max": 0.9683593248420724
+  },
+  "pon_flags": {
+    "use_cord_pon": true
+  },
+  "blacklists_enforced": true,
+  "cord_penalty_weight": 3.0
+}

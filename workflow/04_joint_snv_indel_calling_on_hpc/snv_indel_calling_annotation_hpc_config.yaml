@@ -1,0 +1,111 @@
+# Config file to be used with: variant_calling_pipeline.V1.sh
+# Author: Venetia D'Arcy
+# Date: 25-02-2026
+# This combines info from Marco's config files: Extended_variant_extracting_config.yaml and adapts it to run on the HPC.
+
+# ==============================================================================
+# I. REFERENCE FILES (PATHS)
+# Update these paths to point to your actual reference files.
+# ==============================================================================
+PATHS:
+  # Reference Genome FASTA used for alignment and normalization.
+  ref_fasta: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/reference_genomes/Homo_sapiens.GRCh38.dna.primary_assembly.with_chr.fa"
+  
+  # File containing all necessary '##contig' header lines for VCFs.
+  contigs_hdr: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/tools/contigs.hdr"
+  
+  # Target Region BED File used for splitting and metric calculation.
+  bed_targets: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/panels/hg38_exome_comp_spikein_v2.0.2_targets_sorted.re_annotated_3col.bed"
+
+  # Base directory to save BED chunks for parallel processing.
+  bed_chunks_dir: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/panels/exome_v2.0.2_comp_chunks"
+  
+  # Blacklist BED files to exclude problematic regions.
+  #encode_blacklist: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Marco_sequencing_data_and_variant_processing/reference_genome/GRCh38_ENCODE_blacklist.bed" 
+  repeatmasker_blacklist: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/panels/GRCh38_RepeatMasker_blacklist.bed"
+  encode_blacklist: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/panels/master_blacklist.bed"
+
+  # Processed data directory for all output files:
+  processed_data_dir: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data" 
+
+
+# ==============================================================================
+# II. GLOBAL PARAMETERS
+# Controls parallelization, resources, and final annotation fields.
+# ==============================================================================
+PARAMS:
+  # DCS Parallelization: Number of chunks to split the BED file into (Rule: split_bed_regions).
+  n_chunks_dcs: 60
+  
+  # SSCS Parallelization: Number of chunks to split the final DCS candidate VCF into (Rule: split_candidate_vcf).
+  n_chunks_sscs: 60
+  
+  # Comma-separated list of the new SSCS fields to annotate onto the DCS VCF (Rule: final_annotate).
+  final_annot_fields: 'INFO/N_ALT_SSCS,INFO/N_TOTAL_SSCS,INFO/STRAND_BIAS_SSCS,INFO/RP_MED_SSCS,INFO/RP_SD_SSCS'
+
+
+
+
+# ==============================================================================
+# III. SAMPLE DATA
+# List of all samples and their associated BAM file paths.
+# ==============================================================================
+samples:
+  # Sample names and paths
+  J41:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J41.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J41.V4.mapped.sscs.bam"
+  J42:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J42.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J42.V4.mapped.sscs.bam"
+  J45:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J45.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J45.V4.mapped.sscs.bam"
+  J46:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J46.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J46.V4.mapped.sscs.bam"
+  J51:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J51.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J51.V4.mapped.sscs.bam"
+  J52:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J52.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J52.V4.mapped.sscs.bam"
+  J53:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J53.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J53.V4.mapped.sscs.bam"
+  J54:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J54.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J54.V4.mapped.sscs.bam"
+  J55:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J55.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J55.V4.mapped.sscs.bam"
+  J56:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J56.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J56.V4.mapped.sscs.bam"
+  J57:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J57.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J57.V4.mapped.sscs.bam"
+  J58:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J58.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J58.V4.mapped.sscs.bam"
+  J59:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J59.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J59.V4.mapped.sscs.bam"
+  J60:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J60.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J60.V4.mapped.sscs.bam"
+  J61:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J61.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J61.V4.mapped.sscs.bam"
+  J62:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J62.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J62.V4.mapped.sscs.bam"
+  J63:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J63.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J63.V4.mapped.sscs.bam"
+  J64:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J64.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J64.V4.mapped.sscs.bam"
+  J67:
+    dcs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J67.V4.mapped.dcs.bam"
+    sscs_bam: "/home/vd248/rds/rds-general_use-Q5jpz9ZAQ7k/Venetia/ExptJ_processed_data/J67.V4.mapped.sscs.bam"

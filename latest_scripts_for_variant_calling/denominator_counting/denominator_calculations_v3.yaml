@@ -1,0 +1,140 @@
+# Paths
+wes_bed: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Marco_sequencing_data_and_variant_processing/reference_genome/hg38_exome_v2.0.2_targets_sorted_validated.re_annotated.bed"
+blacklist_bed: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Marco_sequencing_data_and_variant_processing/reference_genome/master_blacklist.bed"
+reference: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Marco_sequencing_data_and_variant_processing/reference_genome/GRCh38.primary_assembly.genome.fa"
+
+# Density Mask Thresholds
+density:
+  window_small: 20
+  max_vars_small: 2
+  window_large: 250
+  max_vars_large: 10
+  genome_build: "hg38"
+
+# Samples: mapping name to [bam_path, vcf_path]
+samples:
+  27YO_PBMC_CD4: 
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI5.duplex.cons.mapped.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/27YO_UDI5/annotated.vcf" 
+  27YO_PBMC_CD8:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI6.duplex.cons.mapped.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/27YO_UDI6/annotated.vcf"
+  LEG_002_PBMC_CD4:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI21.V.1.1.7.duplex.cons.mapped.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/UDI21_3x/annotated.vcf"
+  LEG_002_PBMC_CD8:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI22.V.1.1.7.duplex.cons.mapped.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/UDI22_3x/annotated.vcf"
+  LEG_004_PBMC_CD4:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI23.V.1.1.7.duplex.cons.mapped.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/UDI23_3x/annotated.vcf"
+  LEG_004_PBMC_CD8:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI24.V.1.1.7.duplex.cons.mapped.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/UDI24_3x/annotated.vcf"
+  CUH832_PBMC_CD4:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/CUH832_PBMC_CD4.duplex.cons.mapped.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CUH832_PBMC_CD4/annotated.vcf"
+  CUH832_PBMC_CD8:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/CUH832_PBMC_CD8.duplex.cons.mapped.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CUH832_PBMC_CD8/annotated.vcf"
+  CUH832_TILS_CD4:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/CUH832_TILS_CD4.duplex.cons.mapped.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CUH832_TILS_CD4/annotated.vcf"
+  CUH832_TILS_CD8:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/CUH832_TILS_CD8.duplex.cons.mapped.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CUH832_TILS_CD8/annotated.vcf"
+  Cordblood_D1:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/D1.V1.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CordBlood_D1/annotated.vcf"
+  Cordblood_D2:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/D2.V1.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CordBlood_D2/annotated.vcf"
+  Cordblood_H1:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/H1.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CordBlood_H1/annotated.vcf"
+  Cordblood_H2:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/H2.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CordBlood_H2/annotated.vcf"
+  Cordblood_H3:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/H3.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CordBlood_H3/annotated.vcf"
+  Cordblood_H4:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/H4.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CordBlood_H4/annotated.vcf"
+  Cordblood_H5:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/H5.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CordBlood_H5/annotated.vcf"
+  Cordblood_H6:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/H6.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CordBlood_H6/annotated.vcf"
+  Cordblood_H7:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/H7.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CordBlood_H7/annotated.vcf"
+  Cordblood_H8:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/H8.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/CordBlood_H8/annotated.vcf"
+  UKCTOCS_UDI1:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI1.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/UKCTOCS_UDI1/annotated.vcf"
+  UKCTOCS_UDI2:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI2.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/UKCTOCS_UDI2/annotated.vcf"
+  UKCTOCS_UDI3:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI3.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/UKCTOCS_UDI3/annotated.vcf"
+  UKCTOCS_UDI4:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI4.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/UKCTOCS_UDI4/annotated.vcf"
+  UKCTOCS_UDI5:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI5.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/UKCTOCS_UDI5/annotated.vcf" 
+  UKCTOCS_UDI6:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI6.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/UKCTOCS_UDI6/annotated.vcf"
+  UKCTOCS_UDI7:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI7.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/UKCTOCS_UDI7/annotated.vcf"
+  UKCTOCS_UDI8:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/UDI8.V2.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/UKCTOCS_UDI8/annotated.vcf"
+  LEGACY_I1:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/I1.V3.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/LEGACY_I1/annotated.vcf"
+  LEGACY_I2:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/I2.V3.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/LEGACY_I2/annotated.vcf"
+  LEGACY_I3:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/I3.V3.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/LEGACY_I3/annotated.vcf"
+  LEGACY_I4:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/I4.V3.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/LEGACY_I4/annotated.vcf"
+  LEGACY_I5:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/I5.V3.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/LEGACY_I5/annotated.vcf"
+  LEGACY_I6:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/I6.V3.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/LEGACY_I6/annotated.vcf"
+  LEGACY_I7:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/I7.V3.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/LEGACY_I7/annotated.vcf"
+  LEGACY_I8:
+    bam: "/Users/marcodupuisrodriguez/Documents/PhD/duplex_bams/I8.V3.mapped.dcs.bam"
+    vcf: "/Users/marcodupuisrodriguez/Documents/PhD/VCS/Duplex_variant_caller/data/snvs/unfiltered_vcf/variants/LEGACY_I8/annotated.vcf"
+
+
+# Thresholds
+thresholds:
+  MIN_MQ: 20
+  MIN_BQ: 82
+  MIN_ASXS: 10
+  MAX_NM: 2.5
+  MAX_N_COUNT: 2.1
+  MAX_SOFTCLIP: 0.4
+  MAX_INSERT: 524
+  MIN_READ_POS: 4
+  MAX_READ_POS: 138
+  MIN_DEPTH: 20
+
+# Chromosomes to process
+chroms: ["chr1", "chr2", "chr3", "chr4", "chr5", "chr6", "chr7", "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14", "chr15", "chr16", "chr17", "chr18", "chr19", "chr20", "chr21", "chr22", "chrX", "chrY"]

@@ -1,0 +1,66 @@
+# HPC_V.1.1.7_config_LEGACY2x.yaml
+samples:
+  # These are now lists (in brackets)
+  - id: "CUH832_PBMC_CD4"
+    read1: 
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI1.237YNGLT4.s_3.r_1.fq.gz"
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI1.237YNGLT4.s_4.r_1.fq.gz"
+    read2: 
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI1.237YNGLT4.s_3.r_2.fq.gz"
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI1.237YNGLT4.s_4.r_2.fq.gz"
+    library: "exome_2.0_comp"
+
+  - id: "CUH832_PBMC_CD8"
+    read1: 
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI2.237YNGLT4.s_3.r_1.fq.gz"
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI2.237YNGLT4.s_4.r_1.fq.gz"
+    read2: 
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI2.237YNGLT4.s_3.r_2.fq.gz"
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI2.237YNGLT4.s_4.r_2.fq.gz"
+    library: "exome_2.0_comp"
+
+  - id: "CUH832_TILS_CD4"
+    read1: 
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI3.237YNGLT4.s_3.r_1.fq.gz"
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI3.237YNGLT4.s_4.r_1.fq.gz"
+    read2: 
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI3.237YNGLT4.s_3.r_2.fq.gz"
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI3.237YNGLT4.s_4.r_2.fq.gz"
+    library: "exome_2.0_comp"
+
+  - id: "CUH832_TILS_CD8"
+    read1: 
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI4.237YNGLT4.s_3.r_1.fq.gz"
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI4.237YNGLT4.s_4.r_1.fq.gz"
+    read2: 
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI4.237YNGLT4.s_3.r_2.fq.gz"
+      - "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_raw_data/SLX-27427.xGenUDI4.237YNGLT4.s_4.r_2.fq.gz"
+    library: "exome_2.0_comp"
+
+# Output directories
+final_output_dir: "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_processed_snakemake_7"
+temp_output_dir: "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_snakemake_7/temporary_output_folder"
+concat_dir: "/home/mvd25/rds/rds-general_use-Q5jpz9ZAQ7k/Marco/CUH832_snakemake_7/temporary_output_folder"
+
+# Globals
+reference: "/home/mvd25/rds/hpc-work/reference_genome/GRCh38.primary_assembly.genome.fa"
+version: "V4"
+fgbio_jar: "/home/mvd25/rds/hpc-work/tools/fgbio-3.1.1.jar"
+r1_read_structure: "3M2S145T"
+r2_read_structure: "3M2S145T"
+platform: "illumina"
+platform_model: "NovaSeqX_25B"
+sequencing_center: "CRUK"
+exome_2.0_bed: "/home/mvd25/rds/hpc-work/reference_genome/hg38_exome_v2.0.2_targets_sorted_validated.re_annotated.bed"
+exome_2.0_comp_bed: "/home/mvd25/rds/hpc-work/reference_genome/hg38_exome_v2.0.2_targets_sorted_validated.re_annotated.bed"
+
+# Filtering / consensus / clipping parameters
+UMI_edits: 0
+clip_bases: 0 # only 3' clipping in pipeline 3 and below
+min_sscs_reads: 2
+min_dcs_reads: "4 2 2"
+min_input_base_quality: 45
+min_filter_base_quality: 45
+min_map_q: 20
+max_base_error_rate: 0.2
+max_no_calls: 0.9

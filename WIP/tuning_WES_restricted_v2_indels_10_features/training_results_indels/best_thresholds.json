@@ -1,0 +1,37 @@
+{
+  "thresholds": {
+    "n_total_min": 21,
+    "depth_percentile_max": 99,
+    "mean_inset_qual_min": 24,
+    "mean_del_anchor_qual_min": 44,
+    "max_slippage_reads": 5,
+    "asxs_min": 32,
+    "mean_mapq_min": 28,
+    "avg_alt_nm_max": 4.088728862390473,
+    "dist_to_softclip_min": 5,
+    "variants_250bp_max": 9,
+    "ref_entropy_min": 1.0993989518027525,
+    "min_dist_to_indel": 0,
+    "min_rp_med": 0.017671733241641,
+    "max_rp_med": 0.965178540966074,
+    "max_n_count": 0.424222542488228,
+    "germline_vaf_max": 0.2,
+    "avg_alt_read_mean_baseq_min": 39.17336015565481,
+    "mean_ref_mapq_min": 41.87884077215997,
+    "avg_nonaltread_variants_max": 5.076566697726226,
+    "sd_insert_max": 545.2692974379048,
+    "avg_read_position_min": 2.091796393318653,
+    "avg_read_position_max": 144.62202357159612,
+    "avg_read_length_min": 51.68438786998171,
+    "strand_bias_n_alt_min": 4,
+    "strand_bias_min": 0.028567633681747705,
+    "strand_bias_max": 0.9135441363126924,
+    "rp_sd_min_alt": 5,
+    "rp_sd_min": 0.003612661992698105
+  },
+  "pon_flags": {
+    "use_cord_pon": true
+  },
+  "blacklists_enforced": true,
+  "cord_penalty_weight": 5.0
+}

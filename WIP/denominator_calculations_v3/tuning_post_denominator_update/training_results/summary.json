@@ -1,0 +1,8 @@
+{
+  "n_samples": 18,
+  "obs_mean_over_expected": 0.772903873482246,
+  "total_observed": 23835,
+  "total_expected": 38935.112315246086,
+  "weighted_poisson_deviance": 8976.868883597901,
+  "variants_blocked_by_blacklists": 1192
+}
